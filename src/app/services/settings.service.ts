@@ -6,7 +6,7 @@ import { from } from 'rxjs';
 })
 export class SettingsService {
 settings: Settings = {
-  allowRegistration: true,
+  allowRegistration: false,
   disableBalanceOnAdd:false,
   disableBalanceOnEdit:false
 }
