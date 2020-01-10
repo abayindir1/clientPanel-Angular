@@ -23,4 +23,8 @@ export class AuthService {
     return this.afAuth.authState.pipe(auth => auth)
   }
 
+  logout(){
+    this.afAuth.auth.signOut()
+  }
+
 }
