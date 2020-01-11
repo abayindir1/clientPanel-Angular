@@ -20,7 +20,7 @@ export class AddClientComponent implements OnInit {
     balance: 0
   }
 
-  disableBalanceOnAdd:boolean = this.settingServices.getSettings().disableBalanceOnAdd
+  disableBalanceOnAdd:boolean ;
   @ViewChild("clientForm", { static: false }) form: any
   constructor(
     private flashMessagesService:FlashMessagesService,
@@ -30,6 +30,8 @@ export class AddClientComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+
+    this.disableBalanceOnAdd = this.settingServices.getSettings().disableBalanceOnAdd
   }
 
   onSubmit({value, valid}: {value:Client, valid:boolean}){

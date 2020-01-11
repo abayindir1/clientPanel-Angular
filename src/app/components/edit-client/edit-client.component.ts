@@ -20,7 +20,7 @@ export class EditClientComponent implements OnInit {
     phone:"",
     balance:0
   }
-  disableBalanceOnEdit: boolean = this.settingService.getSettings().disableBalanceOnEdit;
+  disableBalanceOnEdit: boolean;
 
   constructor
   (private flashMessagesService:FlashMessagesService,
@@ -30,6 +30,8 @@ export class EditClientComponent implements OnInit {
     private route:ActivatedRoute,) { }
 
   ngOnInit() {
+    this.disableBalanceOnEdit  = this.settingService.getSettings().disableBalanceOnEdit;
+
     this.id = this.route.snapshot.params["id"];
 
     this.clientService.getClient(this.id).subscribe(client=>{
