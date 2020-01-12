@@ -1,6 +1,6 @@
 # Client Panel
 
-A customer management application where you can manage your customers' debts to you
+A customer management application where you can manage your customers' debts to you. Allows you to check your customers' debt and total debt using your own account
 
 ## Deployment
 
